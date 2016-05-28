@@ -51,4 +51,11 @@ class SWCraftMu_KataBowling_160527_TestsMissingTries: XCTestCase {
 		
 		XCTAssert(counter.score == 0)
 	}
+	
+	func testRandomFails() {
+		let counter = BowlingCounter("1-3-5--2123--4-212-4")
+		
+		XCTAssert(counter.score == 1+3+5+2+1+2+3+4+2+1+2+4)
+	}
+	
 }
