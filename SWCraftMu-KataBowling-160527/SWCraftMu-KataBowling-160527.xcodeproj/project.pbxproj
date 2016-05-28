@@ -13,6 +13,7 @@
 		820FCBA31CFA3F950085D25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820FCBA21CFA3F950085D25E /* Assets.xcassets */; };
 		820FCBA61CFA3F950085D25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820FCBA41CFA3F950085D25E /* LaunchScreen.storyboard */; };
 		820FCBB11CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCBB01CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift */; };
+		820FCBBD1CFA42DB0085D25E /* BowlingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCBBC1CFA42DB0085D25E /* BowlingCounter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		820FCBAC1CFA3F950085D25E /* SWCraftMu-KataBowling-160527Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SWCraftMu-KataBowling-160527Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		820FCBB01CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWCraftMu_KataBowling_160527Tests.swift; sourceTree = "<group>"; };
 		820FCBB21CFA3F950085D25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820FCBBC1CFA42DB0085D25E /* BowlingCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BowlingCounter.swift; path = Kata/BowlingCounter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		820FCB9A1CFA3F950085D25E /* SWCraftMu-KataBowling-160527 */ = {
 			isa = PBXGroup;
 			children = (
+				820FCBBB1CFA42AB0085D25E /* Kata */,
 				820FCB9B1CFA3F950085D25E /* AppDelegate.swift */,
 				820FCB9D1CFA3F950085D25E /* ViewController.swift */,
 				820FCB9F1CFA3F950085D25E /* Main.storyboard */,
@@ -94,6 +97,14 @@
 				820FCBB21CFA3F950085D25E /* Info.plist */,
 			);
 			path = "SWCraftMu-KataBowling-160527Tests";
+			sourceTree = "<group>";
+		};
+		820FCBBB1CFA42AB0085D25E /* Kata */ = {
+			isa = PBXGroup;
+			children = (
+				820FCBBC1CFA42DB0085D25E /* BowlingCounter.swift */,
+			);
+			name = Kata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				820FCB9E1CFA3F950085D25E /* ViewController.swift in Sources */,
+				820FCBBD1CFA42DB0085D25E /* BowlingCounter.swift in Sources */,
 				820FCB9C1CFA3F950085D25E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
