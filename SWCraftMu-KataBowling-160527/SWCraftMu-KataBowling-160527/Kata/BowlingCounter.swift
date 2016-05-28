@@ -10,21 +10,18 @@ import Foundation
 
 class BowlingCounter {
 	var score: Int {
-		switch game {
-		case "11111111111111111111":
-			return 1*20
-			
-		case "22222222222222222222":
-			return 2*20
-			
-		default:
-			return -1
-		}
+		return BowlingCounter.evaluateGame(game)
 	}
 	
 	let game: String
 	
 	init(_ game: String) {
 		self.game = game
+	}
+}
+
+private extension BowlingCounter {
+	private static func evaluateGame(game: String) -> Int {
+		return game.characters.reduce(0) { $0.0 + Int(String($0.1))! }
 	}
 }
