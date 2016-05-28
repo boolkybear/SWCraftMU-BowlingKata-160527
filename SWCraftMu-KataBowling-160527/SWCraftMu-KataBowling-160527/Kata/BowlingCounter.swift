@@ -22,6 +22,6 @@ class BowlingCounter {
 
 private extension BowlingCounter {
 	private static func evaluateGame(game: String) -> Int {
-		return game.characters.reduce(0) { $0.0 + Int(String($0.1))! }
+		return game.characters.reduce(0) { $0.0 + (Int(String($0.1)) ?? 0) }
 	}
 }
