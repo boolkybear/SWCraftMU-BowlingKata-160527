@@ -51,4 +51,9 @@ class SWCraftMu_KataBowling_160527Tests: XCTestCase {
 		XCTAssert(counter.score == (4+5)*10)
 	}
 	
+	func testRandomPins() {
+		let counter = BowlingCounter("12345432123454321234")
+		
+		XCTAssert(counter.score == 1+2+3+4+5+4+3+2+1+2+3+4+5+4+3+2+1+2+3+4)
+	}
 }
