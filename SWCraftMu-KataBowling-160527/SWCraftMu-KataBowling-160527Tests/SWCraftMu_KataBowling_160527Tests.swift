@@ -36,7 +36,7 @@ class SWCraftMu_KataBowling_160527Tests: XCTestCase {
 	func testOnePinEachTry() {
 		let counter = BowlingCounter("11111111111111111111");
 		
-		XCTAssert(counter.score == 2*10);
+		XCTAssert(counter.score == 1*20);
 	}
 	
 }
