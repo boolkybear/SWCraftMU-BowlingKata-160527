@@ -33,6 +33,7 @@ class SWCraftMu_KataBowling_160527Tests: XCTestCase {
 //        }
 //    }
 	
+	// TESTS Tirar al menos un bolo en cada tirada
 	func testOnePinEachTry() {
 		let counter = BowlingCounter("11111111111111111111")
 		
@@ -55,5 +56,12 @@ class SWCraftMu_KataBowling_160527Tests: XCTestCase {
 		let counter = BowlingCounter("12345432123454321234")
 		
 		XCTAssert(counter.score == 1+2+3+4+5+4+3+2+1+2+3+4+5+4+3+2+1+2+3+4)
+	}
+	
+	// TESTS Tiradas con fallos
+	func testOnePinMissSecondTry() {
+		let counter = BowlingCounter("1-1-1-1-1-1-1-1-1-1-")
+		
+		XCTAssert(counter.score == 1*10)
 	}
 }
