@@ -45,4 +45,10 @@ class SWCraftMu_KataBowling_160527Tests: XCTestCase {
 		XCTAssert(counter.score == 2*20)
 	}
 	
+	func testNinePinsEachTurn() {
+		let counter = BowlingCounter("45454545454545454545")
+		
+		XCTAssert(counter.score == (4+5)*10)
+	}
+	
 }
