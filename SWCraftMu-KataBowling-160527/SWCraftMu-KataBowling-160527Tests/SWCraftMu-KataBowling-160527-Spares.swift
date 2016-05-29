@@ -39,4 +39,16 @@ class SWCraftMu_KataBowling_160527_Spares: XCTestCase {
 		XCTAssert(counter.score == (10 + 1)*10)
 	}
 	
+	func testSparesAndMiss() {
+		let counter = BowlingCounter("-/-/-/-/-/-/-/-/-/-/-")
+		
+		XCTAssert(counter.score == 10 * 10)
+	}
+	
+	func testSparesEndWithStrike() {
+		let counter = BowlingCounter("-/-/-/-/-/-/-/-/-/-/X")
+		
+		XCTAssert(counter.score ==	10 * 9 +
+									10 + 10)
+	}
 }
