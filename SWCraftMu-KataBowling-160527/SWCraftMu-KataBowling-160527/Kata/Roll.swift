@@ -11,6 +11,7 @@ import Foundation
 enum Roll {
 	case Roll(Int, Int)
 	case Strike(Int, Int)
+	case Spare(Int)
 	
 	var score: Int {
 		switch self {
@@ -19,6 +20,9 @@ enum Roll {
 			
 		case Strike(let nextFrame, let afterNextFrame):
 			return 10 + nextFrame + afterNextFrame
+			
+		case Spare(let nextFrame):
+			return 10 + nextFrame
 		}
 	}
 }
@@ -38,8 +42,15 @@ class GameParser {
 				index = index.successor()
 				
 			default:
-				mutableRolls.append(.Roll(	GameParser.scoreForString(String(game[index])),
-											GameParser.scoreForString(String(game[index.successor()]))))
+				let nextFrame = game.characters[index.successor()]
+				switch nextFrame {
+				case "/":
+					mutableRolls.append(.Spare(GameParser.scoreForString(String(game[index.successor().successor()]))))
+				
+				default:
+					mutableRolls.append(.Roll(	GameParser.scoreForString(String(game[index])),
+												GameParser.scoreForString(String(game[index.successor()]))))
+				}
 				index = index.successor().successor()
 			}
 		}
