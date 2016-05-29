@@ -35,21 +35,25 @@ class GameParser {
 		
 		var index = game.startIndex
 		for _ in 0..<10 {
-			switch game.characters[index] {
+			let currentFrame = String(game.characters[index])
+			let nextFrame = String(game.characters[index.successor()])
+			
+			switch currentFrame {
 			case "X":
-				mutableRolls.append(.Strike(GameParser.scoreForString(String(game[index.successor()])),
-											GameParser.scoreForString(String(game[index.successor().successor()]))))
+				let afterNextFrame = String(game.characters[index.successor().successor()])
+				mutableRolls.append(.Strike(GameParser.scoreForString(nextFrame),
+											GameParser.scoreForString(afterNextFrame)))
 				index = index.successor()
 				
 			default:
-				let nextFrame = game.characters[index.successor()]
 				switch nextFrame {
 				case "/":
-					mutableRolls.append(.Spare(GameParser.scoreForString(String(game[index.successor().successor()]))))
+					let afterNextFrame = String(game.characters[index.successor().successor()])
+					mutableRolls.append(.Spare(GameParser.scoreForString(afterNextFrame)))
 				
 				default:
-					mutableRolls.append(.Roll(	GameParser.scoreForString(String(game[index])),
-												GameParser.scoreForString(String(game[index.successor()]))))
+					mutableRolls.append(.Roll(	GameParser.scoreForString(currentFrame),
+												GameParser.scoreForString(nextFrame)))
 				}
 				index = index.successor().successor()
 			}
