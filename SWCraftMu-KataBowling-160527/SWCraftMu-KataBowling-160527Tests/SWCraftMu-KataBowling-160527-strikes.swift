@@ -44,4 +44,33 @@ class SWCraftMu_KataBowling_160527_strikes: XCTestCase {
 		
 		XCTAssert(counter.score == 10)
 	}
+	
+	func testRandomStrikesAndRolls() {
+		let counter = BowlingCounter("X12X34X54X32X1-")
+		
+		XCTAssert(counter.score ==	10 + 1 + 2 +
+									1 + 2 +
+									10 + 3 + 4 +
+									3 + 4 +
+									10 + 5 + 4 +
+									5 + 4 +
+									10 + 3 + 2 +
+									3 + 2 +
+									10 + 1 +
+									1)
+	}
+	
+	func testEndsWithStrikeAndRoll() {
+		let counter = BowlingCounter("XXXXXXXXXX12")
+		
+		XCTAssert(counter.score == (10 + 10 + 10) * 8 +
+								   (10 + 10 + 1) +
+								   (10 + 1 + 2))
+	}
+	
+	func testEndsWithStrikes() {
+		let counter = BowlingCounter("------------------XXX")
+		
+		XCTAssert(counter.score == 30)
+	}
 }
