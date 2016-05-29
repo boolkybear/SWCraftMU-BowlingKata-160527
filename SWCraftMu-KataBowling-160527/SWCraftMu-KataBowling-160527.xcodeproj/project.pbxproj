@@ -18,6 +18,7 @@
 		82FD5A431CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */; };
 		82FD5A451CFB00970019504B /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD5A441CFB00970019504B /* Roll.swift */; };
 		82FD5A471CFB096F0019504B /* SWCraftMu-KataBowling-160527-Spares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD5A461CFB096F0019504B /* SWCraftMu-KataBowling-160527-Spares.swift */; };
+		82FD5A491CFB10B00019504B /* SWCraftMu-KataBowling-160527-General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD5A481CFB10B00019504B /* SWCraftMu-KataBowling-160527-General.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWCraftMu-KataBowling-160527-strikes.swift"; sourceTree = "<group>"; };
 		82FD5A441CFB00970019504B /* Roll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Roll.swift; path = Kata/Roll.swift; sourceTree = "<group>"; };
 		82FD5A461CFB096F0019504B /* SWCraftMu-KataBowling-160527-Spares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWCraftMu-KataBowling-160527-Spares.swift"; sourceTree = "<group>"; };
+		82FD5A481CFB10B00019504B /* SWCraftMu-KataBowling-160527-General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWCraftMu-KataBowling-160527-General.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				820FCBBE1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift */,
 				82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */,
 				82FD5A461CFB096F0019504B /* SWCraftMu-KataBowling-160527-Spares.swift */,
+				82FD5A481CFB10B00019504B /* SWCraftMu-KataBowling-160527-General.swift */,
 			);
 			path = "SWCraftMu-KataBowling-160527Tests";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				820FCBBF1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift in Sources */,
 				82FD5A471CFB096F0019504B /* SWCraftMu-KataBowling-160527-Spares.swift in Sources */,
+				82FD5A491CFB10B00019504B /* SWCraftMu-KataBowling-160527-General.swift in Sources */,
 				820FCBB11CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift in Sources */,
 				82FD5A431CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift in Sources */,
 			);
