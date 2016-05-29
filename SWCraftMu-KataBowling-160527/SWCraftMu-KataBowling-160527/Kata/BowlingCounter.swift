@@ -22,18 +22,47 @@ class BowlingCounter {
 
 private extension BowlingCounter {
 	private static func evaluateGame(game: String) -> Int {
-		return game.characters.reduce(0) {
-			let tryScore: Int
-			switch $0.1 {
+		var score = 0
+		var rolls = 0
+		var isFrame = false
+		
+		var index = game.startIndex
+		while rolls < 10 {
+			let frameScore: Int
+			
+			switch game.characters[index] {
 			case "X":
-				tryScore = 300/12
-			case "-":
-				tryScore = 0
+				rolls = rolls + 1
+				isFrame = false
+				
+				frameScore = 10	+ scoreForString(String(game.characters[index.successor()]))
+								+ scoreForString(String(game.characters[index.successor().successor()]))
 			default:
-				tryScore = Int(String($0.1))!
+				if isFrame {
+					rolls = rolls + 1
+					isFrame = false
+				} else {
+					isFrame = true
+				}
+				
+				frameScore = scoreForString(String(game.characters[index]))
 			}
 			
-			return $0.0 + tryScore
+			score += frameScore
+			index = index.successor()
+		}
+		
+		return score
+	}
+	
+	private static func scoreForString(frame: String) -> Int {
+		switch frame {
+		case "X":
+			return 10
+		case "-":
+			return 0
+		default:
+			return Int(frame)!
 		}
 	}
 }
