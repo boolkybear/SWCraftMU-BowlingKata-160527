@@ -15,6 +15,7 @@
 		820FCBB11CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCBB01CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift */; };
 		820FCBBD1CFA42DB0085D25E /* BowlingCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCBBC1CFA42DB0085D25E /* BowlingCounter.swift */; };
 		820FCBBF1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820FCBBE1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift */; };
+		82FD5A431CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		820FCBB21CFA3F950085D25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		820FCBBC1CFA42DB0085D25E /* BowlingCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BowlingCounter.swift; path = Kata/BowlingCounter.swift; sourceTree = "<group>"; };
 		820FCBBE1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWCraftMu-KataBowling-160527-TestsMissingTries.swift"; sourceTree = "<group>"; };
+		82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SWCraftMu-KataBowling-160527-strikes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				820FCBB01CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift */,
 				820FCBB21CFA3F950085D25E /* Info.plist */,
 				820FCBBE1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift */,
+				82FD5A421CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift */,
 			);
 			path = "SWCraftMu-KataBowling-160527Tests";
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				820FCBBF1CFA498B0085D25E /* SWCraftMu-KataBowling-160527-TestsMissingTries.swift in Sources */,
 				820FCBB11CFA3F950085D25E /* SWCraftMu_KataBowling_160527Tests.swift in Sources */,
+				82FD5A431CFAD9470019504B /* SWCraftMu-KataBowling-160527-strikes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +410,7 @@
 				820FCBB71CFA3F950085D25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		820FCBB81CFA3F950085D25E /* Build configuration list for PBXNativeTarget "SWCraftMu-KataBowling-160527Tests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +419,7 @@
 				820FCBBA1CFA3F950085D25E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
