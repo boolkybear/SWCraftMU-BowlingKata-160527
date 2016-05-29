@@ -27,11 +27,10 @@ class GameParser {
 	let rolls: [Roll]
 	
 	init(_ game: String) {
-		var parsedRolls = 0
 		var mutableRolls: [Roll] = []
 		
 		var index = game.startIndex
-		while parsedRolls < 10 {
+		for _ in 0..<10 {
 			switch game.characters[index] {
 			case "X":
 				mutableRolls.append(.Strike(GameParser.scoreForString(String(game[index.successor()])),
@@ -43,8 +42,6 @@ class GameParser {
 											GameParser.scoreForString(String(game[index.successor()]))))
 				index = index.successor().successor()
 			}
-			
-			parsedRolls = parsedRolls + 1
 		}
 		
 		rolls = mutableRolls
