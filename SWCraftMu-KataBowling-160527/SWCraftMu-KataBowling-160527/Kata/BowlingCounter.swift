@@ -10,59 +10,18 @@ import Foundation
 
 class BowlingCounter {
 	var score: Int {
-		return BowlingCounter.evaluateGame(game)
+		return BowlingCounter.evaluateGame(rolls)
 	}
 	
-	let game: String
+	let rolls: [Roll]
 	
 	init(_ game: String) {
-		self.game = game
+		rolls = GameParser(game).rolls
 	}
 }
 
 private extension BowlingCounter {
-	private static func evaluateGame(game: String) -> Int {
-		var score = 0
-		var rolls = 0
-		var isFrame = false
-		
-		var index = game.startIndex
-		while rolls < 10 {
-			let frameScore: Int
-			
-			switch game.characters[index] {
-			case "X":
-				rolls = rolls + 1
-				isFrame = false
-				
-				frameScore = 10	+ scoreForString(String(game.characters[index.successor()]))
-								+ scoreForString(String(game.characters[index.successor().successor()]))
-			default:
-				if isFrame {
-					rolls = rolls + 1
-					isFrame = false
-				} else {
-					isFrame = true
-				}
-				
-				frameScore = scoreForString(String(game.characters[index]))
-			}
-			
-			score += frameScore
-			index = index.successor()
-		}
-		
-		return score
-	}
-	
-	private static func scoreForString(frame: String) -> Int {
-		switch frame {
-		case "X":
-			return 10
-		case "-":
-			return 0
-		default:
-			return Int(frame)!
-		}
+	private static func evaluateGame(rolls: [Roll]) -> Int {
+		return rolls.reduce(0) { $0.0 + $0.1.score }
 	}
 }
