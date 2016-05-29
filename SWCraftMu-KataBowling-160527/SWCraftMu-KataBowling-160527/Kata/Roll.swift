@@ -41,8 +41,15 @@ class GameParser {
 			switch currentFrame {
 			case "X":
 				let afterNextFrame = String(game.characters[index.successor().successor()])
-				mutableRolls.append(.Strike(GameParser.scoreForString(nextFrame),
-											GameParser.scoreForString(afterNextFrame)))
+				switch afterNextFrame {
+				case "/":
+					mutableRolls.append(.Strike(GameParser.scoreForString(nextFrame),
+												10 - GameParser.scoreForString(nextFrame)))
+				default:
+					mutableRolls.append(.Strike(GameParser.scoreForString(nextFrame),
+												GameParser.scoreForString(afterNextFrame)))
+				}
+				
 				index = index.successor()
 				
 			default:
