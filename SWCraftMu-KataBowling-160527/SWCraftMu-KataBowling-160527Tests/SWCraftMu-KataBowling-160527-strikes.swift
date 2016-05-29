@@ -34,8 +34,8 @@ class SWCraftMu_KataBowling_160527_strikes: XCTestCase {
 //    }
 
 	func testAllStrikes() {
-		let counter = BowlingCounter("XXXXXXXXXXXXXXXXXXXX")
+		let counter = BowlingCounter("XXXXXXXXXXXX")
 		
-		XCTAssert(counter.score == 300)
+		XCTAssert(counter.score == 30*10)
 	}
 }
